@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var user: GitHubUser?
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         VStack(spacing: 20) {
@@ -34,7 +35,7 @@ struct ContentView: View {
         .padding()
         .task {
             do {
-                user = try await getUser()
+                user = try await viewModel.getUser()
             } catch GHError.invalidURL {
                 print("invalid URL")
             } catch GHError.invalidRes {
@@ -46,40 +47,9 @@ struct ContentView: View {
             }
         }
     }
-    
-    
-    func getUser() async throws -> GitHubUser {
-        let endpoint = "https://api.github.com/users/twostraws"
-        guard let url = URL(string: endpoint) else { throw GHError.invalidURL}
-        let (data, response) = try await URLSession.shared.data(from: url)
-        guard let resonse = response as? HTTPURLResponse, resonse.statusCode == 200 else {
-            throw GHError.invalidRes
-        }
-        do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            return try decoder.decode(GitHubUser.self, from: data)
-        } catch {
-            throw GHError.invalidData
-        }
-    }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
-
-
-struct GitHubUser: Codable {
-    let login: String
-    let avatarUrl: String
-    let bio: String
-}
-
-enum GHError: Error {
-    case invalidURL
-    case invalidRes
-    case invalidData
 }

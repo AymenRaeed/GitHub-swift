@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09CB0F4F2A82EEF00066F125 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB0F4E2A82EEF00066F125 /* ViewModel.swift */; };
 		09D40AEB2A5C86980050C0B2 /* GitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D40AEA2A5C86980050C0B2 /* GitHubApp.swift */; };
 		09D40AED2A5C86980050C0B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D40AEC2A5C86980050C0B2 /* ContentView.swift */; };
 		09D40AEF2A5C86990050C0B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D40AEE2A5C86990050C0B2 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09CB0F4E2A82EEF00066F125 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		09D40AE72A5C86980050C0B2 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D40AEA2A5C86980050C0B2 /* GitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApp.swift; sourceTree = "<group>"; };
 		09D40AEC2A5C86980050C0B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				09D40AEA2A5C86980050C0B2 /* GitHubApp.swift */,
 				09D40AEC2A5C86980050C0B2 /* ContentView.swift */,
+				09CB0F4E2A82EEF00066F125 /* ViewModel.swift */,
 				09D40AEE2A5C86990050C0B2 /* Assets.xcassets */,
 				09D40AF02A5C86990050C0B2 /* Preview Content */,
 			);
@@ -95,7 +98,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					09D40AE62A5C86980050C0B2 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D40AED2A5C86980050C0B2 /* ContentView.swift in Sources */,
+				09CB0F4F2A82EEF00066F125 /* ViewModel.swift in Sources */,
 				09D40AEB2A5C86980050C0B2 /* GitHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +185,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -241,6 +246,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
